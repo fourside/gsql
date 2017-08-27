@@ -11,7 +11,8 @@ type checkCommand struct {
 
 func (c *checkCommand) Run(args []string) int {
 	c.ui.Info(fmt.Sprintf("check command %v", args))
-	return 0
+	ret := DbConnect()
+	return ret
 }
 
 func (c *checkCommand) Synopsis() string {
