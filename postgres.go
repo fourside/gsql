@@ -6,14 +6,29 @@ import (
 	_ "github.com/lib/pq"
 )
 
-const (
-	username = ""
-	password = ""
-	database = "app_database"
-	port     = "5432"
+var (
+	username string
+	password string
+	database string
+	port     string
+	sslmode  string
 )
 
+func init() {
+	config, err := ReadConfig()
+	if err != nil {
+		fmt.Printf("%v\n", err)
+		return
+	}
+	username = config.DbConfig.User
+	password = config.DbConfig.Password
+	database = config.DbConfig.Database
+	port = config.DbConfig.Port
+	sslmode = config.DbConfig.SSLMode
+}
+
 func DbConnect() int {
+
 	connectionString := fmt.Sprintf("user=%s password=%s dbname=%s port=%s sslmode=disable", username, password, database, port)
 	db, err := sql.Open("postgres", connectionString)
 	defer db.Close()

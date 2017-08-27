@@ -1,0 +1,10 @@
+---
+db:
+    user: 
+    password: 
+    database: app_database
+    port: 5432
+    sslmode: disable
+ssh:
+    forwarding: false
+
