@@ -11,7 +11,9 @@ func main() {
 	c := cli.NewCLI("gsql", gsql.Version())
 	c.Args = os.Args[1:]
 	c.Commands = map[string]cli.CommandFactory{
-		"check": gsql.CheckCommandFactory,
+		"check":  gsql.CheckCommandFactory,
+		"create": gsql.CreateCommandFactory,
+		"update": gsql.UpdateCommandFactory,
 	}
 	exitCode, err := c.Run()
 	if err != nil {

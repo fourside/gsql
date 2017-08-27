@@ -23,3 +23,15 @@ func CheckCommandFactory() (cli.Command, error) {
 		ui: Ui,
 	}, nil
 }
+
+func CreateCommandFactory() (cli.Command, error) {
+	return &createCommand{
+		ui: Ui,
+	}, nil
+}
+
+func UpdateCommandFactory() (cli.Command, error) {
+	return &updateCommand{
+		ui: Ui,
+	}, nil
+}
