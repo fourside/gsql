@@ -9,21 +9,16 @@ endif
 $(NAME):
 	go build -o ${NAME}${EXT} cmd/gsql/main.go
 
-.PHONY: clean
 clean:
 	rm -f ${NAME}
 
-.PHONY: setup
 setup:
-	go get "github.com/mitchellh/cli"
-	go get "github.com/lib/pq"
-	go get "gopkg.in/yaml.v2"
+	go get "github.com/Masterminds/glide"
 
-.PHONY: test
 test:
 
-.PHONY: lint
 lint:
 
 
+.PHONY: clean setup test lint
 

@@ -1,0 +1,5 @@
+package: github.com/fourside/gsql
+import:
+- package: github.com/lib/pq
+- package: github.com/mitchellh/cli
+- package: gopkg.in/yaml.v2

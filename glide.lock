@@ -1,0 +1,32 @@
+hash: 2aa47516c8d40ac3e1d6e2609d0af1f0156feb8140cc35aa56425e7015614b65
+updated: 2017-08-28T22:17:06.6110615+09:00
+imports:
+- name: github.com/armon/go-radix
+  version: 1fca145dffbcaa8fe914309b1ec0cfc67500fe61
+- name: github.com/bgentry/speakeasy
+  version: 4aabc24848ce5fd31929f7d1e4ea74d3709c14cd
+- name: github.com/hashicorp/errwrap
+  version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
+- name: github.com/hashicorp/go-multierror
+  version: 83588e72410abfbe4df460eeb6f30841ae47d4c4
+- name: github.com/lib/pq
+  version: e42267488fe361b9dc034be7a6bffef5b195bceb
+  subpackages:
+  - oid
+- name: github.com/mattn/go-isatty
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/mitchellh/cli
+  version: 0ce7cd515f64496ee660ab19f6bbf373945d3af0
+- name: github.com/posener/complete
+  version: 2100d1b06c06462a8a47bfc41a7f24a5d60a1420
+  subpackages:
+  - cmd
+  - cmd/install
+  - match
+- name: golang.org/x/sys
+  version: 2d6f6f883a06fc0d5f4b14a81e4c28705ea64c15
+  subpackages:
+  - unix
+- name: gopkg.in/yaml.v2
+  version: eb3733d160e74a9c7e442f435eb3bea458e1d19f
+testImports: []
